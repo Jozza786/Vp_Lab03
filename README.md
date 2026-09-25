@@ -52,6 +52,4 @@ The selected course is sent to the parent component using `EventCallback<string>
 
 This project demonstrates the basic concepts of Blazor components, parameters, events, reusable components, and parent-child communication.
 
-## Author
 
-**Your Name**
