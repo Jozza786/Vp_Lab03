@@ -1,0 +1,68 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Week 03 Blazor Lab</PageTitle>
+
+<h1>Week 03 Blazor Lab</h1>
+
+<hr />
+
+<h2>Task 1 - Student Profile</h2>
+
+<StudentProfile
+    StudentName="Jozza Batool"
+    RegistrationNo="2500594"
+    Department="Computer Science"
+    Semester="3rd" />
+    
+<hr />
+
+<h2>Task 2 - Course Information</h2>
+
+<CourseInfo
+    CourseCode="CS-382L"
+    CourseName="Visual Programming"
+    CreditHours="2"
+    Instructor="Sir Qadeer Yasin" />
+
+<CourseInfo
+    CourseCode="CS-216"
+    CourseName="DSA"
+    CreditHours="3"
+    Instructor="Dr. Bilal" />
+
+<CourseInfo
+    CourseCode="MA-110"
+    CourseName="Calculas"
+    CreditHours="3"
+    Instructor="Sir Yasir" />
+
+<hr />
+
+<h2>Task 3 - Counter</h2>
+
+<Counter />
+
+<hr />
+
+<h2>Task 4 - Course Selection</h2>
+
+<CourseSelector CourseSelected="CourseSelected" />
+
+@if (!string.IsNullOrEmpty(selectedCourse))
+{
+    <p>
+        <strong>Selected Course:</strong>
+        @selectedCourse
+    </p>
+}
+
+@code
+{
+    private string selectedCourse = "";
+
+    private void CourseSelected(string courseName)
+    {
+        selectedCourse = courseName;
+    }
+}

@@ -1,0 +1,30 @@
+﻿<div>
+    <h3>@CourseName</h3>
+
+    <p>
+        <strong>Course Code:</strong> @CourseCode
+    </p>
+
+    <p>
+        <strong>Credit Hours:</strong> @CreditHours
+    </p>
+
+    <p>
+        <strong>Instructor:</strong> @Instructor
+    </p>
+</div>
+
+@code
+{
+    [Parameter]
+    public string CourseCode { get; set; } = "";
+
+    [Parameter]
+    public string CourseName { get; set; } = "";
+
+    [Parameter]
+    public int CreditHours { get; set; }
+
+    [Parameter]
+    public string Instructor { get; set; } = "";
+}

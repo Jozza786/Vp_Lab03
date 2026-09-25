@@ -1,0 +1,44 @@
+﻿<div>
+    <h2>Select a Course</h2>
+
+    <div>
+        <p>
+            <strong>Visual Programming</strong>
+        </p>
+
+        <button @onclick='() => SelectCourse("Visual Programming")'>
+            Select
+        </button>
+    </div>
+
+    <div>
+        <p>
+            <strong>DSA</strong>
+        </p>
+
+        <button @onclick='() => SelectCourse("DSA")'>
+            Select
+        </button>
+    </div>
+
+    <div>
+        <p>
+            <strong>Calculas</strong>
+        </p>
+
+        <button @onclick='() => SelectCourse("Calculas")'>
+            Select
+        </button>
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public EventCallback<string> CourseSelected { get; set; }
+
+    private async Task SelectCourse(string courseName)
+    {
+        await CourseSelected.InvokeAsync(courseName);
+    }
+}

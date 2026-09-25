@@ -1,0 +1,34 @@
+﻿<div>
+    <h2>Student Profile</h2>
+
+    <p>
+        <strong>Name:</strong> @StudentName
+    </p>
+
+    <p>
+        <strong>Registration No:</strong> @RegistrationNo
+    </p>
+
+    <p>
+        <strong>Department:</strong> @Department
+    </p>
+
+    <p>
+        <strong>Semester:</strong> @Semester
+    </p>
+</div>
+
+@code
+{
+    [Parameter]
+    public string StudentName { get; set; } = "";
+
+    [Parameter]
+    public string RegistrationNo { get; set; } = "";
+
+    [Parameter]
+    public string Department { get; set; } = "";
+
+    [Parameter]
+    public string Semester { get; set; } = "";
+}

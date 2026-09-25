@@ -1,0 +1,30 @@
+﻿<div>
+    <h2>Counter</h2>
+
+    <p>
+        <strong>Current Value:</strong> @currentValue
+    </p>
+
+    <button @onclick="Increase">
+        Increase
+    </button>
+
+    <button @onclick="Decrease">
+        Decrease
+    </button>
+</div>
+
+@code
+{
+    private int currentValue = 0;
+
+    private void Increase()
+    {
+        currentValue++;
+    }
+
+    private void Decrease()
+    {
+        currentValue--;
+    }
+}
